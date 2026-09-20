@@ -1254,6 +1254,106 @@ html {
 
 
 
+/*rejister form*/
+/* Registration Section Styling */
+.registration-section {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.registration-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* Card Container */
+.reg-card {
+  background: radial-gradient(circle at top, #1a1a1a 0%, #0d0d0d 100%);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 20px;
+  padding: 50px 30px;
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.reg-title {
+  font-size: 2rem;
+  color: #ffffff;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.reg-description {
+  font-size: 1rem;
+  color: #cccccc;
+  max-width: 650px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Gold Gradient Registration Button */
+.reg-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #ffd700 0%, #d4af37 100%);
+  color: #000000;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 16px 36px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+.reg-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5);
+  background: linear-gradient(135deg, #ffffff 0%, #ffd700 100%);
+}
+
+.reg-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.reg-btn:hover svg {
+  transform: translateX(5px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .registration-section {
+    padding: 50px 15px;
+  }
+
+  .reg-card {
+    padding: 30px 18px;
+    border-radius: 16px;
+  }
+
+  .reg-title {
+    font-size: 1.4rem;
+  }
+
+  .reg-description {
+    font-size: 0.9rem;
+  }
+
+  .reg-btn {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+
 
 
   </style>
@@ -1664,40 +1764,28 @@ html {
   </div>
 </section>
 
-<!-- ලියාපදිංචි වීමේ පෝරමය (RSVP Form Section) -->
-<section class="rsvp-section" id="register">
-    <div class="container" id="register-form">
-        <div class="form-wrapper">
-            <h2 class="section-title">පන්තියට සම්බන්ධ වීමට මෙම පෝරමය පුරවන්න</h2>
-            
-            <form id="rsvp-form">
-                <!-- ශිෂ්‍යයාගේ නම -->
-                <div class="input-group">
-                    <label for="student_name">ශිෂ්‍යයාගේ නම</label>
-                    <input type="text" id="student_name" name="student_name" placeholder="ඔබගේ සම්පූර්ණ නම ඇතුළත් කරන්න" required>
-                </div>
 
-                <!-- ශ්‍රේණිය -->
-                <div class="input-group">
-                    <label for="grade">ශ්‍රේණිය</label>
-                    <select id="grade" name="grade" required>
-                        <option value="" disabled selected>ඔබගේ ශ්‍රේණිය තෝරන්න</option>
-                        <option value="12 ශ්‍රේණිය">12 ශ්‍රේණිය (2028)</option>
-                        <option value="13 ශ්‍රේණිය">13 ශ්‍රේණිය (2029)</option>
-                    </select>
-                </div>
 
-                <!-- WhatsApp අංකය -->
-                <div class="input-group">
-                    <label for="whatsapp_no">WhatsApp අංකය</label>
-                    <input type="tel" id="whatsapp_no" name="whatsapp_no" placeholder="07X XXX XXXX" required>
-                </div>
+<!-- Registration Section -->
+<section class="registration-section" id="register-form">
+  <div class="registration-container scroll-anim fade-up">
+    
+    <div class="reg-card">
+      <span class="sub-tag"> පන්ති සඳහා ලියාපදිංචිය</span>
+      <h2 class="reg-title">2027 / 2028 A/L Business Studies පන්ති සඳහා දැන්ම ලියාපදිංචි වන්න</h2>
+      
+      <p class="reg-description">
+        ඔබේ ආසනය වෙන් කර ගැනීමට සහ පන්තිවලට අදාළ නිබන්ධන (Tutes) නිවසටම ගෙන්නා ගැනීමට පහත Button එක ක්ලික් කර ලියාපදිංචි පෝරමය (Form) සම්පූර්ණ කරන්න.
+      </p>
 
-                <!-- ඉදිරිපත් කිරීමේ බොත්තම -->
-                <button type="submit" class="submit-btn" id="submit-btn">ලියාපදිංචි වන්න (Submit)</button>
-            </form>
-        </div>
+      <!-- Hosted Form Link Button -->
+      <a href="https://forms.edumix.lk/f/new-student" target="_blank" class="reg-btn">
+        <span>ලියාපදිංචි වීමට මෙතැනින් පිවිසෙන්න</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
     </div>
+
+  </div>
 </section>
 
 
